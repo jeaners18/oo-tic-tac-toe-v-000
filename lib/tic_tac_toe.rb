@@ -118,7 +118,7 @@ until over? == true
   turn
 end
 if draw? == true
-  puts "Cats Game!"
+  puts "Cat's Game!"
 else won?
   puts "Congratulations #{winner}!"
 end
