@@ -61,8 +61,7 @@ def display_board
       else move(index, current_player)
         display_board
     end
-end
-end
+  end
 
 def won?
   WIN_COMBINATIONS.detect do |win_combination|
@@ -82,14 +81,16 @@ def won?
       false
     end
   end
+end
 
-  def full?
+def full?
   if @board.detect {|i| i == " " || i = nil}
   return false
 else
   true
 end
 end
+
 def draw?
   if !won? && full?
   return true
@@ -109,13 +110,6 @@ end
 def winner
   if win_combination = won?
     @board[win_combination.first]
-end
-end
-
-if won?
-  puts "Congratulations #{winner(board)}!"
-else
-  puts "Cat's Game!"
 end
 end
 
